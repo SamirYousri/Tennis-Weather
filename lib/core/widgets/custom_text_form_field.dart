@@ -4,14 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:helping_a_tennis_player/core/utils/constant.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField(
-      {super.key, required this.icon, required this.labelText, this.onChange});
+  const CustomTextFormField({
+    super.key,
+    required this.icon,
+    required this.labelText,
+    this.onChange,
+    this.isHide = false,
+  });
   final IconData icon;
   final String labelText;
   final void Function(String)? onChange;
+  final bool isHide;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: isHide,
       onChanged: onChange,
       validator: (value) {
         if (value?.isEmpty ?? true) {
