@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:helping_a_tennis_player/core/utils/app_image.dart';
-import 'package:helping_a_tennis_player/features/on_boarding_screen/presentation/views/on_boarding.dart';
+import 'package:helping_a_tennis_player/features/on_boarding_screen/presentation/views/on_boarding_view.dart';
 import 'sliding_text.dart';
 
 class SplashViewbody extends StatefulWidget {
@@ -70,7 +70,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) {
-            return const OnBoarding();
+            return const OnBoardingView();
           }),
         );
       },

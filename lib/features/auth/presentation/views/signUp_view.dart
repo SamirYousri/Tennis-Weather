@@ -1,8 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:helping_a_tennis_player/features/auth/presentation/views/widget/sign_up_view_body.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {

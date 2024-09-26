@@ -1,14 +1,18 @@
+// ignore_for_file: body_might_complete_normally_nullable
+
 import 'package:flutter/material.dart';
 import 'package:helping_a_tennis_player/core/utils/constant.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
-      {super.key, required this.icon, required this.labelText});
+      {super.key, required this.icon, required this.labelText, this.onChange});
   final IconData icon;
   final String labelText;
+  final void Function(String)? onChange;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: onChange,
       validator: (value) {
         if (value?.isEmpty ?? true) {
           return 'Field is requer';

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "875491121216",
+    "project_id": "tennis-weather-app",
+    "storage_bucket": "tennis-weather-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875491121216:android:abf5f99048e7a7f25067a5",
+        "android_client_info": {
+          "package_name": "com.example.helping_a_tennis_player"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApi6VLTzOXbUgmte8SWFieWQA3t2rIjuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

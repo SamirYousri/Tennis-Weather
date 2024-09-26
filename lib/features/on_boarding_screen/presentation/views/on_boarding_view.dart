@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:helping_a_tennis_player/core/utils/app_image.dart';
-import 'package:helping_a_tennis_player/features/auth/presentation/views/signIn.dart';
+import 'package:helping_a_tennis_player/features/auth/presentation/views/registration_type_view.dart';
 import 'package:helping_a_tennis_player/features/on_boarding_screen/presentation/views/widget/item_page_view.dart';
 
-class OnBoarding extends StatefulWidget {
-  const OnBoarding({super.key});
+class OnBoardingView extends StatefulWidget {
+  const OnBoardingView({super.key});
 
   @override
-  State<OnBoarding> createState() => _OnBoardingState();
+  State<OnBoardingView> createState() => _OnBoardingViewState();
 }
 
-class _OnBoardingState extends State<OnBoarding> {
+class _OnBoardingViewState extends State<OnBoardingView> {
   late PageController pageController;
   int currentPageIndex = 0;
 
@@ -78,7 +78,7 @@ class _OnBoardingState extends State<OnBoarding> {
           ItemPageView(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const SignIn();
+                return const RegistrationTypeView();
               }));
             },
             image: Assets.imagesPlayer,
