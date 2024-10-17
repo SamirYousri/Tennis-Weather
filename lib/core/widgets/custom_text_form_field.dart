@@ -1,16 +1,18 @@
-// ignore_for_file: body_might_complete_normally_nullable
+// ignore_for_file: body_might_complete_normally_nullable, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:helping_a_tennis_player/core/utils/constant.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({
+  CustomTextFormField({
     super.key,
     required this.icon,
     required this.labelText,
     this.onChange,
     this.isHide = false,
+    this.controller,
   });
+  TextEditingController? controller;
   final IconData icon;
   final String labelText;
   final void Function(String)? onChange;
@@ -18,6 +20,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       obscureText: isHide,
       onChanged: onChange,
       validator: (value) {
