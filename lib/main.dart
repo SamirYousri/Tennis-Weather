@@ -9,6 +9,7 @@ import 'package:helping_a_tennis_player/features/home/data/dataSource/weather_re
 import 'package:helping_a_tennis_player/features/home/data/repos_impl/weather_repository_impl.dart';
 import 'package:helping_a_tennis_player/features/home/domin/usecase/get_weather_usecase.dart';
 import 'package:helping_a_tennis_player/features/home/presentation/manager/weather_bloc/weather_bloc.dart';
+import 'package:helping_a_tennis_player/features/home/presentation/views/home_view.dart';
 import 'package:helping_a_tennis_player/features/splash/presentation/views/splash_view.dart';
 import 'package:helping_a_tennis_player/firebase_options.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -55,7 +56,8 @@ class TennisWeather extends StatelessWidget {
             ThemeData.dark().textTheme,
           ),
         ),
-        home: const SplashView(),
+        home: const HomeView(),
+        // const SplashView(),
       ),
     );
   }
