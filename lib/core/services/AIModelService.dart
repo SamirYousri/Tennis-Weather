@@ -1,29 +1,38 @@
-// ignore_for_file: depend_on_referenced_packages
+// ignore_for_file: file_names, depend_on_referenced_packages
 
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:flutter/foundation.dart';
 
 class AIModelService {
-  final String baseUrl = 'http://127.0.0.1:5001';
+  final String baseUrl =
+      'http://192.168.1.6:5001'; // تأكد من تغيير عنوان الـ IP إلى ما يناسبك
 
-  Future<bool> fetchAdvice(
-      double averageTemp, double maxTemp, double minTemp) async {
+  Future<int?> fetchAIAdvice(List<int> features) async {
     final url = Uri.parse('$baseUrl/predict');
+
+    // إنشاء بيانات الطلب
+    Map<String, dynamic> body = {'features': features};
+
+    // إرسال الطلب
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
-      body: jsonEncode({
-        'average_temp': averageTemp,
-        'max_temp': maxTemp,
-        'min_temp': minTemp,
-      }),
+      body: json.encode(body),
     );
 
+    // التعامل مع الاستجابة
     if (response.statusCode == 200) {
-      final result = jsonDecode(response.body);
-      return result['advice'] == 1;
+      final prediction = json.decode(response.body)['prediction'];
+      if (kDebugMode) {
+        print('Prediction: $prediction');
+      }
+      return prediction[0];
     } else {
-      throw Exception('Failed to fetch advice from AI model');
+      if (kDebugMode) {
+        print('Failed to get prediction');
+      }
+      return null;
     }
   }
 }
