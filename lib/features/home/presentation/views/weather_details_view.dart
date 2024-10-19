@@ -5,11 +5,10 @@ import 'package:helping_a_tennis_player/features/home/presentation/views/widgets
 import 'package:helping_a_tennis_player/features/home/presentation/views/widgets/weather_details_view_body.dart';
 
 class WeatherDetailsView extends StatelessWidget {
-  const WeatherDetailsView({
-    Key? key,
-    required this.weatherEntity,
-  }) : super(key: key);
+  const WeatherDetailsView({Key? key, required this.weatherEntity})
+      : super(key: key);
   final WeatherEntity weatherEntity;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
