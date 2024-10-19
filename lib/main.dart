@@ -56,8 +56,8 @@ class TennisWeather extends StatelessWidget {
             ThemeData.dark().textTheme,
           ),
         ),
-        home: const HomeView(),
-        // const SplashView(),
+        home: const SplashView(),
+        // const HomeView(),
       ),
     );
   }
