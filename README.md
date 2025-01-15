@@ -4,7 +4,7 @@
 
 ## Demo Video 🎥
 Watch the demo video to see how the app works:
-[Click here to watch the video](https://drive.google.com/file/d/1iWqbkCOvu4aBIaCwPHIeVHwUfFauhIfa/view?usp=drivesdk)
+[Click here to watch the video](https://drive.google.com/file/d/1qT1YQXx-GotKbPu8mREoV_Fkexbw821u/view?usp=sharing)
 
 ## Features ✨
 - **Weather Analysis**: Get a quick response on whether the weather is suitable for playing tennis.
@@ -29,8 +29,4 @@ Watch the demo video to see how the app works:
 - **Artificial Intelligence**: To analyze data and provide recommendations based on weather conditions.
 - **Onboarding Screen**: An introduction screen to explain the app’s features for first-time users.
 
-## Installation 🚀
-1. Ensure you have [Flutter](https://flutter.dev/docs/get-started/install) installed on your machine.
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/username/TennisWeather.git
+
